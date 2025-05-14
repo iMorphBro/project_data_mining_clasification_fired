@@ -1,8 +1,11 @@
 from flask import Flask, render_template, request, jsonify
 import joblib
 import pandas as pd
+# Tambahkan di app.py
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 # Load model
 model = joblib.load('model_rf_kebakaran.joblib')
