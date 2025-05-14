@@ -1,63 +1,131 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Prediksi Keparahan Kebakaran</title>
     <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-100 flex items-center justify-center min-h-screen">
-
+  </head>
+  <body class="bg-gray-100 flex items-center justify-center min-h-screen">
     <div class="bg-white shadow-xl rounded-xl p-8 w-full max-w-md">
-        <h1 class="text-2xl font-bold mb-4 text-center">Prediksi Keparahan Kebakaran</h1>
-        <form id="predictForm" class="space-y-4">
-            <!-- input fields -->
-            <div>
-                <label for="luas_area_kejadian" class="block font-semibold">Luas Area Kejadian</label>
-                <input type="number" id="luas_area_kejadian" name="luas_area_kejadian" required class="w-full border rounded-lg p-2">
-            </div>
-            <div>
-                <label for="jumlah_sdm" class="block font-semibold">Jumlah SDM</label>
-                <input type="number" id="jumlah_sdm" name="jumlah_sdm" required class="w-full border rounded-lg p-2">
-            </div>
-            <div>
-                <label for="jumlah_unit" class="block font-semibold">Jumlah Unit</label>
-                <input type="number" id="jumlah_unit" name="jumlah_unit" required class="w-full border rounded-lg p-2">
-            </div>
-            <div>
-                <label for="jumlah_jiwa" class="block font-semibold">Jumlah Jiwa</label>
-                <input type="number" id="jumlah_jiwa" name="jumlah_jiwa" required class="w-full border rounded-lg p-2">
-            </div>
-            <div>
-                <label for="objek_bp" class="block font-semibold">Objek BP</label>
-                <input type="number" id="objek_bp" name="objek_bp" required class="w-full border rounded-lg p-2">
-            </div>
-            <div>
-                <label for="jumlah_kk" class="block font-semibold">Jumlah KK</label>
-                <input type="number" id="jumlah_kk" name="jumlah_kk" required class="w-full border rounded-lg p-2">
-            </div>
-            <div>
-                <label for="objek_bup" class="block font-semibold">Objek BUP</label>
-                <input type="number" id="objek_bup" name="objek_bup" required class="w-full border rounded-lg p-2">
-            </div>
-            <div>
-                <label for="objek_bi" class="block font-semibold">Objek BI</label>
-                <input type="number" id="objek_bi" name="objek_bi" required class="w-full border rounded-lg p-2">
-            </div>
+      <h1 class="text-2xl font-bold mb-4 text-center">
+        Prediksi Keparahan Kebakaran
+      </h1>
+      <form id="predictForm" class="space-y-4">
+        <!-- input fields -->
+        <div>
+          <label for="luas_area_kejadian" class="block font-semibold"
+            >Luas Area Kejadian</label
+          >
+          <input
+            type="number"
+            id="luas_area_kejadian"
+            name="luas_area_kejadian"
+            required
+            class="w-full border rounded-lg p-2"
+          />
+        </div>
+        <div>
+          <label for="jumlah_sdm" class="block font-semibold">Jumlah SDM</label>
+          <input
+            type="number"
+            id="jumlah_sdm"
+            name="jumlah_sdm"
+            required
+            class="w-full border rounded-lg p-2"
+          />
+        </div>
+        <div>
+          <label for="jumlah_unit" class="block font-semibold"
+            >Jumlah Unit</label
+          >
+          <input
+            type="number"
+            id="jumlah_unit"
+            name="jumlah_unit"
+            required
+            class="w-full border rounded-lg p-2"
+          />
+        </div>
+        <div>
+          <label for="jumlah_jiwa" class="block font-semibold"
+            >Jumlah Jiwa</label
+          >
+          <input
+            type="number"
+            id="jumlah_jiwa"
+            name="jumlah_jiwa"
+            required
+            class="w-full border rounded-lg p-2"
+          />
+        </div>
+        <div>
+          <label for="objek_bp" class="block font-semibold">Objek BP</label>
+          <input
+            type="number"
+            id="objek_bp"
+            name="objek_bp"
+            required
+            class="w-full border rounded-lg p-2"
+          />
+        </div>
+        <div>
+          <label for="jumlah_kk" class="block font-semibold">Jumlah KK</label>
+          <input
+            type="number"
+            id="jumlah_kk"
+            name="jumlah_kk"
+            required
+            class="w-full border rounded-lg p-2"
+          />
+        </div>
+        <div>
+          <label for="objek_bup" class="block font-semibold">Objek BUP</label>
+          <input
+            type="number"
+            id="objek_bup"
+            name="objek_bup"
+            required
+            class="w-full border rounded-lg p-2"
+          />
+        </div>
+        <div>
+          <label for="objek_bi" class="block font-semibold">Objek BI</label>
+          <input
+            type="number"
+            id="objek_bi"
+            name="objek_bi"
+            required
+            class="w-full border rounded-lg p-2"
+          />
+        </div>
 
-            <button type="submit" class="w-full bg-blue-600 text-white font-bold py-2 rounded-lg hover:bg-blue-700">Prediksi</button>
-        </form>
+        <button
+          type="submit"
+          class="w-full bg-blue-600 text-white font-bold py-2 rounded-lg hover:bg-blue-700"
+        >
+          Prediksi
+        </button>
+      </form>
     </div>
 
     <!-- Modal popup -->
-    <div id="resultModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
-        <div class="bg-white rounded-lg p-6 text-center w-80 relative">
-            <img id="resultIcon" src="" alt="icon" class="w-20 mx-auto mb-4">
-            <h2 id="resultText" class="text-xl font-bold"></h2>
-            <button onclick="closeModal()" class="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Tutup</button>
-        </div>
+    <div
+      id="resultModal"
+      class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden"
+    >
+      <div class="bg-white rounded-lg p-6 text-center w-80 relative">
+        <img id="resultIcon" src="" alt="icon" class="w-20 mx-auto mb-4" />
+        <h2 id="resultText" class="text-xl font-bold"></h2>
+        <button
+          onclick="closeModal()"
+          class="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+        >
+          Tutup
+        </button>
+      </div>
     </div>
 
     <script src="{{ url_for('static', filename='script.js') }}"></script>
-</body>
+  </body>
 </html>
